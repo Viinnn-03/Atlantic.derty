@@ -1,0 +1,27 @@
+/* Custom css untuk grid */
+.grid-item {
+  padding: 20px;
+  margin-bottom: 15px;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+}
+
+/* Warna berbeda untuk setiap item */
+.grid-item:nth-child(odd) {
+  background-color: #e3f2fd;
+}
+
+.grid-item:nth-child(even) {
+  background-color: #bbdefb;
+}
+
+/* Efek hover */
+.grid-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive text */
+.grid-item h3 {
+  font-size: calc(1rem + 0.5vw);
+}

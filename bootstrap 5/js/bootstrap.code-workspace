@@ -1,0 +1,31 @@
+{
+	"folders": [
+		{
+			"path": "../../../Documents/Interactive Form with Validation"
+		},
+		{
+			"path": "../../../Documents/Dynamic Todo List with Event Handling"
+		},
+		{
+			"path": "../../../Documents/mengubah konten dan style element"
+		},
+		{
+			"path": "../../../Documents/Menambah dan Menghapus Element"
+		},
+		{
+			"path": "../../../Documents/Validation dan Event Handling"
+		},
+		{
+			"path": "../../../Documents/bootstrap"
+		},
+		{
+			"path": "../../../Documents/dasar bootstrap"
+		},
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "bootstrap 5"
+	}
+}
