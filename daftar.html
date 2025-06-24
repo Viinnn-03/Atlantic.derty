@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Form Pendaftaran</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #121212;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .form-container {
+      background-color: #1e1e1e;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+      text-align: center;
+      max-width: 400px;
+      width: 100%;
+    }
+    h2 {
+      margin-bottom: 30px;
+      font-weight: 600;
+    }
+    input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      font-size: 1em;
+      border: none;
+      border-radius: 6px;
+    }
+    button, .btn-beranda {
+      width: 100%;
+      padding: 12px;
+      font-size: 1em;
+      border: none;
+      border-radius: 6px;
+      background-color: #ffc107;
+      color: #000;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 15px;
+    }
+    button:hover, .btn-beranda:hover {
+      background-color: #e0a800;
+    }
+    #successMessage, #berandaBtn {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Registrasi</h2>
+    <input type="text" placeholder="Masukkan username" id="regUsername" />
+    <input type="password" placeholder="Masukkan password" id="regPassword" />
+    <button onclick="onRegister()">DAFTAR</button>
+
+    <!-- Pesan berhasil & tombol -->
+    <h3 id="successMessage">🎉 Berhasil Login</h3>
+    <a href="beranda.html" id="berandaBtn" class="btn-beranda">Ke Beranda</a>
+  </div>
+
+  <script>
+    function onRegister() {
+      const username = document.getElementById('regUsername').value.trim();
+      const password = document.getElementById('regPassword').value.trim();
+
+      if (!username || !password) {
+        alert("Username dan password harus diisi!");
+        return;
+      }
+
+      // Simpan data ke localStorage
+      localStorage.setItem("username", username);
+      localStorage.setItem("role", "basic");
+
+      // Sembunyikan form, tampilkan pesan & tombol
+      document.getElementById('regUsername').style.display = "none";
+      document.getElementById('regPassword').style.display = "none";
+      document.querySelector('button').style.display = "none";
+      document.getElementById('successMessage').style.display = "block";
+      document.getElementById('berandaBtn').style.display = "inline-block";
+    }
+  </script>
+</body>
+</html>
